@@ -1,0 +1,88 @@
+/* Body */
+body {
+    background-color: rgb(109, 102, 102);
+}
+
+/* Header */
+header {
+    height: 130px;
+    width: auto;
+    margin: -20px -8px 0px -8px;
+    background-color: #1F1F1F;
+}
+div#cabecalho {
+    float: left;
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 79%;
+}
+
+div#cabecalho h1 {
+    margin: 25px 0px 0px 20px; 
+    color: rgb(192, 11, 162);
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0px 0px 5px rgb(151, 1, 1);
+    font-size: 50px;
+}
+div#cabecalho h2 {
+    text-indent: 15px;
+    margin: -10px 0px 0px 20px; 
+    color: rgb(192, 11, 162);
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0px 0px 5px rgb(151, 1, 1);
+    font-size: 30px;
+}
+
+div#usuario {
+    display: block;
+    float: right;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    border-left: 1px black solid;
+    
+}
+div#usuario h3 {
+    font-family: 'Times New Roman';
+    color: white;
+    text-align: center;
+    padding: 10px 5px 0px 10px;
+}
+div#usuario form {
+    text-align: center;
+}
+div#usuario input#desconectar {
+    width: 100px;
+    height: 25px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    transition: 1s;
+}
+div#usuario input#desconectar:hover {
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+/* Interface */
+section#interface {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    float: bottom;
+    height: 130px;
+    width: auto;
+    margin: 0px -8px 0px -8px;
+    background-color: #1F1F1F;
+}

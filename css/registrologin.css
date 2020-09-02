@@ -1,0 +1,130 @@
+/*Corpo*/
+html {
+    --body: rgb(109, 102, 102);
+    --interfacebc: linear-gradient(45deg, #8F5BCD, #53C6C0, #8ABE4B, #B3464B); 
+}
+
+body {
+    background: var(--body);
+}
+
+/*Interface inteira*/
+
+div#interface {
+    width: 400px;
+    height: 530px;
+    background: var(--interfacebc);
+    padding: 10px;
+    margin: auto;
+    box-shadow: 0px 0px 5px rgba(208, 48, 223, 0.8)
+}
+
+/*Cabecalho*/
+
+header#cabecalho {
+    border-bottom: solid 1px purple;
+}
+header#cabecalho h1 {
+    text-align: center;
+    margin-top: -5px;
+    color: #b931d8;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 0px;
+}
+header#cabecalho h2 {
+    text-align: center;
+    margin-top: 0px;
+    color: #b931d8;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 1px black;
+}
+
+/*Interatividade*/
+
+section#interativo {
+    color: red  ;
+    border-bottom: solid 1px purple;
+    text-align: center;
+    padding-bottom: 10px;
+}
+section#interativo input.input{ 
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 30px;
+    border: blue 1px solid;
+    margin: 5px;
+}
+section#interativo input.button:hover {
+    background-color: rgb(141, 8, 165);
+    cursor: pointer;
+    box-shadow: 0px 0px 5px blue;
+}
+section#interativo input.button {
+    margin-top: 15px;
+    color: white;
+    padding: 10px;
+    width: 300px;
+    transition: 1s;
+    border-radius: 10px;
+    font-size: 20px;
+    border: blue 1px solid;
+    background-color: rgb(183, 22, 246);
+    margin-bottom: 10px;
+}
+section#interativo h2 {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: greenyellow;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.link {
+    text-decoration: underline;
+    color: blue;
+    text-align: center;
+    cursor: pointer;
+}
+/* Section registrar no Login e VoltarLogin no Registro*/
+
+form#registro, form#voltarLogin {
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 1px solid purple;
+}
+form#registro button#registroButton, form#voltarLogin button#voltarLoginButton{
+    color: white;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    border: blue 1px solid;
+    background-color: rgb(120, 192, 11);
+    margin-bottom: 10px;
+    transition: 1s;
+    font-size: 20px;
+    color: white;
+}
+form#registro button#registroButton:hover, form#voltarLogin button#voltarLoginButton:hover{
+    background-color: green;
+    box-shadow: 0px 0px 5px blue;
+    cursor: pointer;
+}
+
+/* Area de erros */
+
+.erro {
+    color: red;
+}
+
+/* Footer */
+
+footer#rodape {
+    text-align: center;
+    padding: 10px;
+}
