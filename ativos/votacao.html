@@ -1,0 +1,23 @@
+    <script>
+        
+        function getVote(int) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('votacao').innerHTML = this.responseText;
+                }
+            }
+            xmlhttp.open("get", "ativos/votacao.php?voto=" + int ,true);
+            xmlhttp.send();
+        } 
+    </script>
+
+    <section id="voto">
+        <h4> Expulsar o Raiser do grupo? </h4>
+        <article id="votacao">
+            <form>
+            Sim: <input type="radio" name="voto" value="0" onclick="getVote(this.value)"/> <br/>    
+            Não: <input type="radio" name="voto" value="1" onclick="getVote(this.value)"/>
+            </form>
+        </article>
+    </section>

@@ -4,10 +4,11 @@ session_start()
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Revenge RPG-Login</title>
-    <link rel="stylesheet" type="text/css" href="css/registrologin.css">
+    <link rel="stylesheet" type="text/css" href="css/registrologin.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="ativos/favicon.ico"/>
     <script src="scripts/adjs.js"></script>
     <script>
         if (typeof(adBlock) == 'undefined') {
@@ -41,6 +42,7 @@ session_start()
                 $_SESSION['nome'] = $resultados['nome'];
                 $_SESSION['registro'] = $resultados['registro'];
                 header("location:jogo.php");
+                die();
             } else {
                 $erro = 'Credenciais incorretas.';
             }
@@ -61,7 +63,7 @@ session_start()
         <section id="interativo">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>">
                 <h2>Logue-se</h2>
-                <input type="text" placeholder="Apelido" class="input" value="<?php require 'verificacookies.php'?>" name="nome" maxlength="14"/> <br/> <br/>
+                <input type="text" placeholder="Apelido" class="input" value="<?php require 'ativos/verificacookies.php'?>" name="nome" maxlength="14"/> <br/> <br/>
                 <input type="password" placeholder="Senha" class="input" name="senha" maxlength="30"/> <br>
                 <span class="erro"> <?php echo $erro; ?> </span> <br/>
                 <input type="submit" value="Entrar" class="button" onmouseover="mouseEntra()"  id="entrar"/>
@@ -76,6 +78,6 @@ session_start()
             <a href="http://www.youtube.com/c/SpiderAura" target="_blank">Youtube</a> │ <a href="http://www.facebook.com" target="_blank">Facebook</a>
         </footer>
     </div>
-    <script src="scripts/interatividade.js"> </script>
+    <script src="scripts/loginregistro.js"> </script>
 </body>
 </html>

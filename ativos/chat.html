@@ -1,0 +1,59 @@
+<head>
+    <style>
+        .mensagem {
+            color: white;
+            position: relative;
+        }
+    </style>
+</head>
+
+<div id="enviarMensagem">
+    <form id="enviarMsg"> 
+        <textarea name="chat" rows="2" id="chat" maxlength="55" placeholder="Clique aqui para enviar uma mensagem. Comporte-se."></textarea> <br>
+        <input type="submit" value="Enviar" form="enviarMsg"/>
+    </form>
+</div>
+
+<script>
+    // Enviar mensagem 
+    function enviarmsg(event) {
+        event.preventDefault();
+
+
+        var msg = document.querySelector("textarea[name='chat']").value
+        if (msg.length == 0) {
+            return
+        } else {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    recebermsg();
+                }
+            }
+        }
+        xmlhttp.open("get","jogo.php?m=" + msg, true);
+        xmlhttp.send();
+
+        document.querySelector("textarea[name='chat']").value = "";
+        document.querySelector("textarea[name='chat']").focus();
+    }
+
+    let form = document.querySelector('form#enviarMsg');
+    form.addEventListener('submit', enviarmsg);
+
+
+    // Receber mensagem
+
+    function recebermsg() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById('mensagens').innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open('get', 'ativos/chat.php', true);
+        xmlhttp.send();
+    }
+    recebermsg();
+    setInterval(recebermsg, 3000);
+</script>

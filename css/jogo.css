@@ -1,31 +1,50 @@
+/* Variáveis */
+html {
+    --bg-color: #1F1F1F;
+    --chat-color: rgb(37, 32, 32);
+}
+
 /* Body */
+
 body {
-    background-color: rgb(109, 102, 102);
+    background-color: var(--bg-color);
 }
 
 /* Header */
 header {
+    display: flex;
+    flex-flow: row;
     height: 130px;
     width: auto;
     margin: -20px -8px 0px -8px;
-    background-color: #1F1F1F;
+    background-color: var(--bg-color);
+    border-bottom: 1px black solid;
 }
-div#cabecalho {
+section#musica {
     float: left;
-    display: block;
     position: relative;
+    order: 1;
+    width: 20%;
     height: 100%;
-    width: 79%;
+}
+section#cabecalho {
+    display: block;
+    text-align: center;
+    position: relative;
+    order: 2;
+    height: 100%;
+    width: 59%;
+    border-bottom: 1px black solid;
 }
 
-div#cabecalho h1 {
+section#cabecalho h1 {
     margin: 25px 0px 0px 20px; 
     color: rgb(192, 11, 162);
     font-family: 'Courier New', Courier, monospace;
     text-shadow: 0px 0px 5px rgb(151, 1, 1);
     font-size: 50px;
 }
-div#cabecalho h2 {
+section#cabecalho h2 {
     text-indent: 15px;
     margin: -10px 0px 0px 20px; 
     color: rgb(192, 11, 162);
@@ -34,25 +53,26 @@ div#cabecalho h2 {
     font-size: 30px;
 }
 
-div#usuario {
+section#usuario {
+    order: 3;
     display: block;
     float: right;
     position: relative;
     width: 20%;
     height: 100%;
-    border-left: 1px black solid;
     
 }
-div#usuario h3 {
+section#usuario h3 {
     font-family: 'Times New Roman';
     color: white;
     text-align: center;
     padding: 10px 5px 0px 10px;
 }
-div#usuario form {
+section#usuario form {
     text-align: center;
 }
-div#usuario input#desconectar {
+section#usuario input#desconectar {
+
     width: 100px;
     height: 25px;
     color: black;
@@ -62,7 +82,7 @@ div#usuario input#desconectar {
     font-size: 15px;
     transition: 1s;
 }
-div#usuario input#desconectar:hover {
+section#usuario input#desconectar:hover {
     width: 100px;
     height: 25px;
     cursor: pointer;
@@ -73,16 +93,158 @@ div#usuario input#desconectar:hover {
     font-size: 15px;
 }
 
-/* Interface */
+/* Tela (interface e asides) */
+
+section#tela {
+    display: flex;
+}
+
+/* Propaganda top*/
+
+section#propagandatop {
+    margin: 10px auto 10px auto;
+    width: 728px;
+    height: 90px;
+    border: 1px solid black;
+}
+
+/*interface*/
+
 section#interface {
+    border: 1px solid black;
+    display: block;
+    height: 600px;
+    width: 61%;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: yellow;
+
+}
+
+/* Chat */
+
+aside#chat {
+    display: flex;
+    flex-flow: column;
+    margin-left: 15px;
+    height: 600px;
+    width: 18%;
+    background-color: var(--chat-color);
+    float: left;
+    border: 1px solid black;
+}
+
+article#mensagens {
+    flex-basis: 80%;
+    max-height: 80%;
+    display: flex;
+    overflow: hidden;
+    word-wrap: break-word;
+    flex-grow: 0;
+    flex-flow: column-reverse;
+    padding: 15px;
+    height: auto;
+}
+
+
+div#enviarMensagem {
+    border-top: 1px solid black;
+    flex-basis: 20%;
+    flex-grow: 0;
+}
+
+div#enviarMensagem form {   
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+div#enviarMensagem textarea[name="chat"] {
+    text-align: left;
+    resize: none;
+    width: 80%;
+    height: 40px;
+    border: 0px 0px 1px black;
+    border-radius: 10px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+
+div#enviarMensagem textarea[name="chat"]:focus {
+    text-align: left;
+    resize: none;
+    width: 80%;
+    background-color: black;
+    color: white;
+    border: 0px 0px 1px rgb(139, 7, 117);
+    border-radius: 10px;
+}
+
+div#enviarMensagem input[type="submit"] {
+    width: 40%;
+    height: 30px;
+    border: 1px black;
+    border-radius: 10px;
+    font-family: 'Times New Roman';
+    font-size: 15px;
+    margin-top: 15px;
+    transition: 1s;
+}
+div#enviarMensagem input[type="submit"]:hover {
+    width: 40%;
+    height: 30px;
+    border: 1px black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    margin-top: 15px;
+}
+
+
+/* Propaganda aside */
+
+aside#propaganda {
+    display: block;
+    margin-right: 15px;
+    height: 600px;
+    width: 300px;
+    float: right;
+    border: 1px solid black;
+}
+aside#rank table#ranking {
+    width: 100%;
+}
+aside#rank p {
     text-align: center;
 }
 
 /* Footer */
 footer {
+    border-top: 1px black solid;
     float: bottom;
-    height: 130px;
+    height: 60px;
     width: auto;
     margin: 0px -8px 0px -8px;
     background-color: #1F1F1F;
+    display: block;
+}
+footer h3 { 
+    font-family: 'Times New Roman';
+    font-weight: normal;
+    color: rgb(0, 195, 255);
+    text-align: center;
+}
+footer h4 {
+    color: white;
+    text-align: center;
+}
+footer a {
+    font-family: 'Times New Roman';
+    text-decoration: underline;
+    font-weight: normal;
+    color: rgb(0, 195, 255);
 }
