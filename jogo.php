@@ -80,8 +80,20 @@ if (isset($_REQUEST["m"])) {
             </aside>
 
         <section id="interface"> 
-            <div class="cartas">
-                
+            <div class="linha">
+                <div id="1" class="quadrado"></div>
+                <div id="2" class="quadrado"></div>
+                <div id="3" class="quadrado"></div>
+            </div>
+            <div class="linha">
+                <div id="4" class="quadrado"></div>
+                <div id="5" class="quadrado"></div>
+                <div id="6" class="quadrado"></div>
+            </div>
+            <div class="linha">
+                <div id="7" class="quadrado"></div>
+                <div id="8" class="quadrado"></div>
+                <div id="9" class="quadrado"></div>
             </div>
         </section>
 
@@ -95,7 +107,7 @@ if (isset($_REQUEST["m"])) {
         <h3>Brabíssimo Tiago &copy; 2020 - <?php echo date("Y"); ?> <br/> </h3>
         <h4><a href="http://www.youtube.com/c/SpiderAura" target="_blank">Youtube</a> │ <a href="http://www.facebook.com" target="_blank">Facebook</a> </h4>
     </footer>
-
+    <script src="scripts/jogodavelha.js"></script>
 </body>
 </html>
 
